@@ -139,6 +139,21 @@ Anti-entropy with Merkle-tree-style digests provides:
 3. **Synchronous tick model**: Membership progression via explicit tick calls
 4. **Generation counter**: Anti-entropy uses monotonic generation for tracking progress
 
+## Design Decisions
+
+1. **TTL-based hop limit**: Prevents infinite propagation in cyclic networks
+2. **Sequence-based deduplication**: Simple, efficient, no need for content hashing
+3. **Synchronous tick model**: Membership progression via explicit tick calls
+4. **Generation counter**: Anti-entropy uses monotonic generation for tracking progress
+5. **Topic-based subscriptions**: Enables efficient fan-out to interested peers only
+6. **Sliding window failure detection**: Balances responsiveness with stability
+
+## References
+
+- Kermarrec, A.M., & van Steen, M. (2007). *Gossiping in Distributed Systems*. ACM Operating Systems Review.
+- Demers, A. et al. (1987). *Epidemic Algorithms for Replicated Database Maintenance*. PODC.
+- Jelasity, M., Voulgaris, S., Guerraoui, R., Kermarrec, A.M., & van Steen, M. (2007). *Gossip-based Peer Sampling*. ACM TOCS.
+
 ## License
 
 MIT
