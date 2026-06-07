@@ -1,0 +1,9 @@
+[package]
+name = "gossip-sub"
+version = "0.1.0"
+edition = "2021"
+description = "Gossip protocol for efficient message dissemination in distributed systems with membership management and anti-entropy synchronization"
+license = "MIT"
+repository = "https://github.com/SuperInstance/gossip-sub"
+
+[dependencies]
